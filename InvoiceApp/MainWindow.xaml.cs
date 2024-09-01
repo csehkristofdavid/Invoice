@@ -20,9 +20,46 @@ namespace InvoiceApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string savedName;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void EditProfile(object sender, RoutedEventArgs e)
+        {
+            var profilPanel = new StackPanel
+            {
+                Margin = new Thickness(20)
+            };
+
+            profilPanel.Children.Add(new TextBlock 
+            {
+                Text = "Cég név",
+                FontSize = 16
+            });
+            var nameTextBox = new TextBox
+            {
+                FontSize = 16,
+                Margin = new Thickness(0,0,0,10)
+            };
+            profilPanel.Children.Add(nameTextBox);
+
+            var saveButton = new Button
+            {
+                Content = "Mentés",
+                FontSize = 16,
+                Padding = new Thickness(10, 5, 10, 5)
+            };
+            saveButton.Click += (s, args) =>
+            {
+                savedName = nameTextBox.Text;
+                MessageBox.Show($"Név elmentve: {savedName}");
+            };
+            profilPanel.Children.Add(saveButton);
+
+            ContentArea.Children.Clear();
+            ContentArea.Children.Add(profilPanel);
         }
     }
 }

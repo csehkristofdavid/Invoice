@@ -32,8 +32,13 @@
                 Margin="5" 
                 Padding="10.5"
                 FontSize="16"
-                FontWeight="Bold"/>
+                FontWeight="Bold"
+                Click="EditProfile"/>
         </StackPanel>
+
+        <Grid Grid.Column="1" Background="white" Name="ContentArea">
+            
+        </Grid>
 
     </Grid>
 </Window>
