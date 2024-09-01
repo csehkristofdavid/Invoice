@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.SQLite;
 
 namespace InvoiceApp
 {
@@ -20,46 +21,97 @@ namespace InvoiceApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string savedName;
+        private string dbConnectionString = "Data Source=invoiceapp.db;Version=3;";
+        private TextBox nameTextBox;
         public MainWindow()
         {
             InitializeComponent();
+            CreateDatabase();
+        }
+
+        private void CreateDatabase()
+        {
+            using (var connection = new SQLiteConnection(dbConnectionString))
+            {
+                connection.Open();
+                var command = new SQLiteCommand("CREATE TABLE IF NOT EXISTS UserProfile (Name TEXT)",
+                    connection);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        private void LoadName()
+        {
+            using (var connection = new SQLiteConnection(dbConnectionString))
+            {
+                connection.Open();
+                var command = new SQLiteCommand("Select Name from UserProfile LIMIT 1",
+                    connection);
+                var result = command.ExecuteScalar() as string;
+                if (nameTextBox != null)
+                {
+                    nameTextBox.Text = result ?? string.Empty;
+                    nameTextBox.IsReadOnly = false;
+                }
+            }
+        }
+
+        private void SaveName(string name)
+        {
+            using (var connection = new SQLiteConnection(dbConnectionString))
+            {
+                connection.Open();
+                var deleteCommand = new SQLiteCommand("DELETE FROM UserProfile", connection);
+                deleteCommand.ExecuteNonQuery();
+
+                var insertCommand = new SQLiteCommand("INSERT INTO UserProfile (Name) VALUES (@Name)", connection);
+                insertCommand.Parameters.AddWithValue("@Name", name);
+                insertCommand.ExecuteNonQuery();
+            }
         }
 
         private void EditProfile(object sender, RoutedEventArgs e)
         {
-            var profilPanel = new StackPanel
+            var profilePanel = new StackPanel
             {
                 Margin = new Thickness(20)
             };
 
-            profilPanel.Children.Add(new TextBlock 
+            profilePanel.Children.Add(new TextBlock
             {
-                Text = "Cég név",
-                FontSize = 16
+                Text = "Név:",
+                FontSize = 16,
+                FontWeight = FontWeights.Bold
             });
-            var nameTextBox = new TextBox
+
+            nameTextBox = new TextBox
             {
                 FontSize = 16,
-                Margin = new Thickness(0,0,0,10)
+                Margin = new Thickness(0, 0, 0, 10)
             };
-            profilPanel.Children.Add(nameTextBox);
+            nameTextBox.GotFocus += (s, _) => {
+                nameTextBox.SelectAll();
+            };
+            profilePanel.Children.Add(nameTextBox);
+            LoadName();
 
             var saveButton = new Button
             {
                 Content = "Mentés",
                 FontSize = 16,
+                FontWeight = FontWeights.Bold,
                 Padding = new Thickness(10, 5, 10, 5)
             };
             saveButton.Click += (s, args) =>
             {
-                savedName = nameTextBox.Text;
-                MessageBox.Show($"Név elmentve: {savedName}");
+                string name = nameTextBox.Text;
+                SaveName(name);
+                MessageBox.Show($"Név elmentve: {name}");
             };
-            profilPanel.Children.Add(saveButton);
+            profilePanel.Children.Add(saveButton);
 
             ContentArea.Children.Clear();
-            ContentArea.Children.Add(profilPanel);
+            ContentArea.Children.Add(profilePanel);
         }
     }
 }

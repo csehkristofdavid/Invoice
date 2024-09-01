@@ -13,3 +13,12 @@ C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.cspro
 C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.csproj.CoreCompileInputs.cache
 C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.exe
 C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.pdb
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\EntityFramework.dll
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\System.Data.SQLite.dll
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\EntityFramework.xml
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\System.Data.SQLite.xml
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.csproj.CopyComplete
