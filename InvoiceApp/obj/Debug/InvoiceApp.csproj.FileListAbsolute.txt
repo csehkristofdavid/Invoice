@@ -1,0 +1,15 @@
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\InvoiceApp.exe.config
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\InvoiceApp.exe
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\bin\Debug\InvoiceApp.pdb
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.csproj.AssemblyReference.cache
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\MainWindow.g.cs
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\App.g.cs
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp_MarkupCompile.cache
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp_MarkupCompile.lref
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\MainWindow.baml
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.g.resources
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.Properties.Resources.resources
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.csproj.GenerateResource.cache
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.csproj.CoreCompileInputs.cache
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.exe
+C:\Users\Kristóf\Desktop\szamlazo\Invoice\InvoiceApp\obj\Debug\InvoiceApp.pdb
