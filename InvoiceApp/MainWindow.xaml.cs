@@ -29,6 +29,7 @@ namespace InvoiceApp
             CreateDatabase();
         }
 
+        //Create UserProfile database
         private void CreateDatabase()
         {
             using (var connection = new SQLiteConnection(dbConnectionString))
@@ -40,6 +41,7 @@ namespace InvoiceApp
             }
         }
 
+        //Load Name for profile from Userprofile database
         private void LoadName()
         {
             using (var connection = new SQLiteConnection(dbConnectionString))
@@ -56,6 +58,7 @@ namespace InvoiceApp
             }
         }
 
+        //Save name to UserProfile database
         private void SaveName(string name)
         {
             using (var connection = new SQLiteConnection(dbConnectionString))
@@ -70,6 +73,7 @@ namespace InvoiceApp
             }
         }
 
+        //GUI for UserProfile
         private void EditProfile(object sender, RoutedEventArgs e)
         {
             var profilePanel = new StackPanel
@@ -106,7 +110,7 @@ namespace InvoiceApp
             {
                 string name = nameTextBox.Text;
                 SaveName(name);
-                MessageBox.Show($"Név elmentve: {name}");
+                MessageBox.Show("Mentés Sikeres!");
             };
             profilePanel.Children.Add(saveButton);
 

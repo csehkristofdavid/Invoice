@@ -22,6 +22,12 @@
                 FontSize="16"
                 FontWeight="Bold"/>
 
+            <Button Content="Számla lista" 
+                Margin="5" 
+                Padding="10.5"
+                FontSize="16"
+                FontWeight="Bold"/>
+
             <Button Content="Kontaktok" 
                 Margin="5" 
                 Padding="10.5"
